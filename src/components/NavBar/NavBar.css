@@ -1,0 +1,145 @@
+nav {
+    width: 100vw;
+    padding: 33px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    background-color: white
+}
+
+nav.active {
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15), 2px 2px 7px 1px rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(5px);
+    padding: 19px 70px;
+}
+
+nav.active .logo{
+    width: 63px;
+}
+
+nav.active .items ul li a{
+    color: #7b9fa8;
+}
+
+nav .items {
+    width: 57.3206vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .items ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+nav .items ul li a {
+    color: #D7E6EA;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 64px;
+    text-decoration: none;
+}
+
+nav .items ul li a.active {
+    color: #071321;
+    font-weight: 700;
+    position: relative;
+}
+
+nav .items ul li a.active::after {
+    content: url('./../../assets/img/line.svg');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav .logIn {
+    width: 201px;
+    height: 44px;
+    background: url('./../../assets/img/button-bg.svg');
+    border: none;
+    color: #1C1B1F;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 131%;
+    letter-spacing: -0.48px;
+}
+
+nav .menu {
+    background: none;
+    border: none;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mobileItems {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%) !important;
+}
+
+nav .mobileItems.active{
+    transform: translateX(0) !important;
+}
+
+nav .mobileItems ul {
+    list-style: none;
+}
+
+nav .mobileItems ul a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #071321;
+    font-size: 30px;
+    text-decoration: none;
+    width: 100vw;
+    height: 100px;
+}
+
+nav .mobileItems ul a.active {
+    background-color: #071321;
+    color: #FFFBFE;
+}
+
+nav .mobileItems .top {
+    width: 100vw;
+    padding: 0 60px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:992px) {
+    nav {
+        padding: 33px 20px;
+    }
+
+    nav .menu {
+        display: block;
+    }
+
+    nav .items {
+        display: none;
+    }
+
+    nav .logo {
+        width: 64px;
+    }
+}
